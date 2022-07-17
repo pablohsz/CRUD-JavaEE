@@ -12,7 +12,10 @@ public class JavaBeans {
 	}
 	
 	public JavaBeans(String idcon, String nome, String fone, String email) {
-		
+		this.setIdcon(idcon);
+		this.setNome(nome);
+		this.setFone(fone);
+		this.setEmail(email);
 	}
 
 	public String getIdcon() {

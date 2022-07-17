@@ -40,3 +40,21 @@ h1 {
 }
 
  .centerImage {text-align: center; display: block; }
+ 
+ #tabela {
+ 	margin-top: 30px;
+ 	border-collapse: collapse;
+ }
+
+#tabela th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	background-color: #66bbff;
+	color: #fff;
+}
+
+#tabela td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
