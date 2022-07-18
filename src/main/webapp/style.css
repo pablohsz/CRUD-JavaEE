@@ -1,45 +1,75 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 
 body {
-	font-family: 'Ubuntu', sans-serif;
+	background-color: #312b2d;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 600;
+	color: #fff;
 }
 
 h1 {
-	color: #66bbff;
+	color: #fff;
+	font-weight:normal;
 }
 
-.Botao1 {
+::placeholder {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+	color: #fff;
+	opacity:0.8;
+}
+
+.Botao0 {
+	font-family: 'Quicksand', sans-serif;
 	padding: 0;
 	border: none;
 	text-decoration: none;
-	background-color: #66bbff;
+	background-color: #2082c3;
 	padding: 5px 10px 5px 10px;
 	color: #fff;
 	font-size: 1.2em;
-	font-weight: 700;
+	font-weight:normal;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.Botao1 {
+	font-family: 'Quicksand', sans-serif;
+	padding: 0;
+	border: none;
+	text-decoration: none;
+	background-color: #7fd1ba;
+	padding: 5px 10px 5px 10px;
+	color: #312b2d;
+	font-size: 1.2em;
+	font-weight: 600;
 	border-radius: 5px;
 	cursor: pointer;
 }
 
 .Caixa1 {
+	font-family: 'Quicksand', sans-serif;
 	width: 320px;
 	padding: 5px;
 	margin-bottom: 10px;
-	border: 1px solid #66bbff;
-	border-radius: 5px;
+	border: 1px solid #7c7c7c;
+	background-color: #7c7c7c;
+	color: #fff;
+	
 }
 
 .Caixa2 {
 	padding: 5px;
 	margin-bottom: 10px;
-	border: 1px solid #66bbff;
-	border-radius: 5px;
+	border: 1px solid #7c7c7c;
+	background-color: #7c7c7c;
+	background-color: #7c7c7c;
+	color: #fff;
 }
 
- .centerImage {text-align: center; display: block; }
  
  #tabela {
  	margin-top: 30px;
@@ -47,14 +77,18 @@ h1 {
  }
 
 #tabela th {
-	border: 1px solid #ddd;
+	border: 2px solid #312b2d;
 	padding: 10px;
 	text-align: left;
-	background-color: #66bbff;
+	background-color: #2082c3;
 	color: #fff;
 }
 
 #tabela td {
-	border: 1px solid #ddd;
+	border: 2px solid #312b2d;
 	padding: 10px;
+	background-color: #7c7c7c;
+	font-weight:normal;
 }
+
+

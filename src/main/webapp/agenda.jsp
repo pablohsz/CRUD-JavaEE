@@ -10,20 +10,20 @@
 <head>
 <meta charset="utf-8">
 <title>Agenda de Contatos</title>
-<link rel="icon" href="Imagens/favcon.png">
+<link rel="icon" href="imagens/favcon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Agenda de contatos</h1>
-	<a href="novo.html" class="Botao1">Novo contato</a>
+	<h1 style="text-align:center">agenda de contatos</h1>
+	<a href="adicionar.html" class="Botao1">novo contato</a>
 	
 	<table id="tabela">
 		<thead>
 			<tr>
-				<th>Id</th>
-				<th>Nome</th>
-				<th>Fone</th>
-				<th>E-mail</th>
+				<th>id</th>
+				<th>nome</th>
+				<th>fone</th>
+				<th>e-mail</th>
 			</tr>
 		</thead>
 		<tbody>
