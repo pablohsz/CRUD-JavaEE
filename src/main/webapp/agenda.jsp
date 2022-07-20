@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1 style="text-align:center">agenda de contatos</h1>
-	<a href="adicionar.html" class="Botao1">novo contato</a>
+	<a href="adicionar.html" class="button1">novo contato</a>
 	
 	<table id="tabela">
 		<thead>

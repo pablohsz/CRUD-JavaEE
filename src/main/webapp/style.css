@@ -22,7 +22,7 @@ h1 {
 	opacity:0.8;
 }
 
-.Botao0 {
+.button0 {
 	font-family: 'Quicksand', sans-serif;
 	padding: 0;
 	border: none;
@@ -36,7 +36,7 @@ h1 {
 	cursor: pointer;
 }
 
-.Botao1 {
+.button1 {
 	font-family: 'Quicksand', sans-serif;
 	padding: 0;
 	border: none;
@@ -50,7 +50,7 @@ h1 {
 	cursor: pointer;
 }
 
-.Caixa1 {
+.box1 {
 	font-family: 'Quicksand', sans-serif;
 	width: 320px;
 	padding: 5px;
@@ -61,7 +61,7 @@ h1 {
 	
 }
 
-.Caixa2 {
+.box2 {
 	padding: 5px;
 	margin-bottom: 10px;
 	border: 1px solid #7c7c7c;
@@ -71,7 +71,7 @@ h1 {
 }
 
  
- #tabela {
+#tabela {
  	margin-top: 30px;
  	border-collapse: collapse;
  }
@@ -91,4 +91,17 @@ h1 {
 	font-weight:normal;
 }
 
+#initial-page img {
+	left: 220px; 
+	top: -160px; 
+	position: absolute;
+}
+
+#initial-page div {
+	height: 25px;
+	left: 320px; 
+	position: absolute; 
+	top: 200px; 
+	width: 500px;
+}
 
