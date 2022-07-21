@@ -5,12 +5,11 @@ public class JavaBeans {
 	private String nome;
 	private String fone;
 	private String email;
-	
 
-	public JavaBeans(){
+	public JavaBeans() {
 		super();
 	}
-	
+
 	public JavaBeans(String idcon, String nome, String fone, String email) {
 		this.setIdcon(idcon);
 		this.setNome(nome);

@@ -18,7 +18,7 @@ public class DAO {
 		Class.forName("org.postgresql.Driver");
 		Connection conecta = DriverManager.getConnection(URL, USER, PASS);
 		if (conecta != null) {
-			System.out.print("Conexão efetuada com sucesso!");
+			System.out.println("Conexão efetuada com sucesso!");
 			return conecta;
 		}
 		return null;
@@ -76,4 +76,57 @@ public class DAO {
 
 	}
 
+	// **CRUD READ**//
+	// selecionar o contato
+	public void selecionarContato(JavaBeans contato) {
+		String select = "SELECT * FROM contatos WHERE idcon = ?;";
+		try {
+			Connection con = criarConexao();
+			PreparedStatement pst = con.prepareStatement(select);
+			pst.setInt(1, Integer.parseInt(contato.getIdcon()));
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				// setar as variáveis JavaBeans
+				contato.setIdcon(rs.getString(1));
+				contato.setNome(rs.getString(2));
+				contato.setFone(rs.getString(3));
+				contato.setEmail(rs.getString(4));
+			}
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	// editar o contato
+	public void alterarContato(JavaBeans contato) {
+		String update = "UPDATE contatos SET nome = ?, fone = ?, email= ? WHERE idcon = ?;";
+		try {
+			Connection con = criarConexao();
+			PreparedStatement pst = con.prepareStatement(update);
+			pst.setString(1, contato.getNome());
+			pst.setString(2, contato.getFone());
+			pst.setString(3, contato.getEmail());
+			pst.setInt(4, Integer.parseInt(contato.getIdcon()));
+			pst.executeUpdate();
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	// **CRUD DELETE**//
+	public void deletarContato(JavaBeans contato) {
+		String delete = "DELETE FROM contatos WHERE idcon = ?; ALTER SEQUENCE contatos_idcon_seq RESTART WITH ?;";
+		try {
+			Connection con = criarConexao();
+			PreparedStatement pst = con.prepareStatement(delete);
+			pst.setInt(1, Integer.parseInt(contato.getIdcon()));
+			pst.setInt(2, Integer.parseInt(contato.getIdcon()));
+			pst.executeUpdate();
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
 }
