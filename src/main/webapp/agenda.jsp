@@ -3,7 +3,7 @@
 <%@ page import="model.JavaBeans"%>
 <%@ page import="java.util.ArrayList"%>
 <%
-	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos");
+ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos");
 %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,9 +14,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1 style="text-align:center">agenda de contatos</h1>
+	<h1 style="text-align: center">agenda de contatos</h1>
 	<a href="adicionar.html" class="button1">novo contato</a>
-	
+
 	<table id="tabela">
 		<thead>
 			<tr>
@@ -28,20 +28,24 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% for (int i = 0; i < lista.size(); i++){ %>
-				<tr>
-					<td><%=lista.get(i).getIdcon()%></td>
-					<td><%=lista.get(i).getNome()%></td>
-					<td><%=lista.get(i).getFone()%></td>
-					<td><%=lista.get(i).getEmail()%></td>
-					<td><a href="select?idcon=<%=lista.get(i).getIdcon()%>" class=button2>editar</a>
-					<a href="delete?idcon=<%=lista.get(i).getIdcon()%>" id=delete-button>excluir</a>
-					
-					</td>
-				</tr>
-			<% } %>
+			<%
+			for (int i = 0; i < lista.size(); i++) {
+			%>
+			<tr>
+				<td><%=lista.get(i).getIdcon()%></td>
+				<td><%=lista.get(i).getNome()%></td>
+				<td><%=lista.get(i).getFone()%></td>
+				<td><%=lista.get(i).getEmail()%></td>
+				<td><a href="select?idcon=<%=lista.get(i).getIdcon()%>"
+					class=button2>editar</a> <a
+					href="javascript: confirmar(<%=lista.get(i).getIdcon()%>)" id=delete-button>excluir</a>
+				</td>
+			</tr>
+			<%
+			}
+			%>
 		</tbody>
 	</table>
-
+	<script src="scripts/confirmador.js"></script>
 </body>
 </html>

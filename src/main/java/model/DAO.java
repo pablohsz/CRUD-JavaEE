@@ -117,12 +117,11 @@ public class DAO {
 
 	// **CRUD DELETE**//
 	public void deletarContato(JavaBeans contato) {
-		String delete = "DELETE FROM contatos WHERE idcon = ?; ALTER SEQUENCE contatos_idcon_seq RESTART WITH ?;";
+		String delete = "DELETE FROM contatos WHERE idcon = ?;";
 		try {
 			Connection con = criarConexao();
 			PreparedStatement pst = con.prepareStatement(delete);
 			pst.setInt(1, Integer.parseInt(contato.getIdcon()));
-			pst.setInt(2, Integer.parseInt(contato.getIdcon()));
 			pst.executeUpdate();
 			con.close();
 		} catch (Exception e) {
