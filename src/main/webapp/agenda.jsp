@@ -10,7 +10,7 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contat
 <head>
 <meta charset="utf-8">
 <title>Agenda de Contatos</title>
-<link rel="icon" href="imagens/favcon.png">
+<link rel="icon" href="images/favcon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
